@@ -18,7 +18,7 @@ public class Employee {
     @SequenceGenerator(name = "employee_seq_gen", sequenceName = "EMPLOYEE_SEQ", allocationSize = 1)
     private Long employeeId;
 
-    private Long employeeTypeId;
+    private Long employeetypeId;
 
     private String username;
 
@@ -33,4 +33,19 @@ public class Employee {
     private Float salary;
 
     private Long supervisorId;
+
+    public Employee(
+            Long employeeId, Long employeetypeId, String username, String password,
+            String firstName, String middleName, String lastName, Float salary, Long supervisorId
+    ) {
+        this.employeeId = employeeId;
+        this.employeetypeId = employeetypeId;
+        this.username = username;
+        this.password = password;
+        this.firstName = firstName;
+        this.middleName = middleName;
+        this.lastName = lastName;
+        this.salary = salary;
+        this.supervisorId = supervisorId;
+    }
 }
