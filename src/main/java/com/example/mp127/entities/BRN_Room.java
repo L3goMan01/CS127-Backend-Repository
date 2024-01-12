@@ -12,13 +12,19 @@ import lombok.Setter;
 @Entity(name = "BRN_ROOM")
 public class BRN_Room {
     @Id
-    private Long roomNumber;
+    //"bookingId" should be the same name as the one in the BRN entity
+    @MapsId("bookingId")
+    //for the @Column(name="BOOKING_ID") tag in the BRN entity
+    @JoinColumn(name="BOOKING_ID")
+    //change BRN to entity name of BRN Table
+    private BRN brnBookingId;
 
     @Id
-    private Long bookingId;
+    //"bookingId" should be the same name as the one in the BRN entity
+    @MapsId("roomNumber")
+    //for the @Column(name="ROOM_NUMBER") tag in the Room entity
+    @JoinColumn(name="ROOM_NUMBER")
+    //change Room to entity name of Room Table
+    private Room roomNumber;
 
-    public BRN_Room(Long roomNumber, Long bookingId) {
-        this.roomNumber = roomNumber;
-        this.bookingId = bookingId;
-    }
 }
