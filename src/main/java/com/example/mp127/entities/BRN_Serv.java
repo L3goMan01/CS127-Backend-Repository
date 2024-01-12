@@ -1,33 +1,26 @@
 package com.example.mp127.entities;
 
 import jakarta.persistence.*;
-import lombok.Data;
+import lombok.Getter;
 import lombok.RequiredArgsConstructor;
+import lombok.Setter;
 
 @RequiredArgsConstructor
-@Data
-@Entity
-@Table(name = "BRN_SERVICE")
+@Getter
+@Setter
+@Entity(name = "BRN_SERVICE")
 public class BRN_Serv {
 
     @Id
-    @ManyToOne
+    @MapsId("bookingId")
     @JoinColumn(name="BOOKING_ID")
-    //change BRN to class name for Booking Reference Number Table
-    private BRN bookingId;
+    //change BRN to entity name of BRN Table
+    private BRN brnBookingID;
 
     @Id
-    @ManyToOne
+    @MapsId("chargedServicesId")
     @JoinColumn(name="CHARGEDSERVICE_ID")
-    //change ChargedServices to class name for Charged Services Table
-    private ChargedServices chargedServiceId;
+    //Change ChargedServicesT to entity name of ChargedServices Table
+    private ChargedServicesT chargedServicesID;
 
-
-    public BRN_Serv(BRN bookingId, ChargedServices chargedServiceId) {
-        this.bookingId = bookingId;
-        this.chargedServiceId = chargedServiceId;
-    }
-
-    public BRN_Serv(Long bookingId, Long chargedServiceId) {
-    }
 }
