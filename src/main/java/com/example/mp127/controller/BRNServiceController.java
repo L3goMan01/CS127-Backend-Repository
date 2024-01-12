@@ -14,7 +14,7 @@ public class BRNServiceController {
     private final BRNServiceServices brnServiceServices;
 
     @PostMapping(path="/brnRecord")
-    public @ResponseBody BRNServiceT addBookingId(@RequestBody addNewBRNServiceEntry primaryKeys){
-        return brnServiceServices.addNewBookingIDEntry(primaryKeys);
+    public @ResponseBody BRNServiceT addPrimaryIds(@RequestBody addNewBRNServiceEntry primaryKeys){
+        return brnServiceServices.addPrimaryIds(primaryKeys);
     }
 }

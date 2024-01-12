@@ -12,6 +12,6 @@ public class BRNServiceServicesImpl implements BRNServiceServices{
     private final BRNServicesRepository brnServicesRepository;
 
     @Override
-    public BRNServiceT addNewBookingIDEntry(addNewBRNServiceEntry primaryKeys){
+    public BRNServiceT addPrimaryIds(addNewBRNServiceEntry primaryKeys){
         return brnServicesRepository.save(primaryKeys.mapToBRNServices());}
 }
