@@ -20,7 +20,7 @@ public class BookingServiceImpl implements BookingService {
 
     @Override
     public Booking addBooking(AddBookingRequest booking) {
-        return null;
+        return bookingRepository.save(booking.mapToBooking());
     }
 
     @Override
