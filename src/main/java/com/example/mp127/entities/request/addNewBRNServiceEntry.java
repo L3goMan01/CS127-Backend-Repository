@@ -3,9 +3,9 @@ package com.example.mp127.entities.request;
 import com.example.mp127.entities.BRNServiceT;
 import com.example.mp127.entities.Booking;
 import com.example.mp127.entities.ChargedServicesT;
-import jakarta.persistence.EmbeddedId;
-import jakarta.persistence.MapsId;
+import lombok.RequiredArgsConstructor;
 
+@RequiredArgsConstructor
 public class addNewBRNServiceEntry {
 
     private Booking brnId;
