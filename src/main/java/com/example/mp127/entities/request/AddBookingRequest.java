@@ -8,9 +8,6 @@ import java.util.Date;
 
 @RequiredArgsConstructor
 public class AddBookingRequest {
-    @JsonProperty("bookingId")
-    private Long bookingId;
-
     @JsonProperty("primaryGuest")
     private Long primaryGuest;
 
@@ -31,7 +28,7 @@ public class AddBookingRequest {
 
     public Booking mapToBooking() {
         return new Booking(
-                bookingId,primaryGuest,employeeId,bookingDate,checkinDate,checkoutDate,numberOfRooms
+                primaryGuest,employeeId,bookingDate,checkinDate,checkoutDate,numberOfRooms
         );
     }
 }

@@ -32,9 +32,8 @@ public class Booking {
 
     private Long numberOfRooms;
 
-    public Booking(Long bookingId, Long primaryGuest, Long employeeId, Date bookingDate,
+    public Booking(Long primaryGuest, Long employeeId, Date bookingDate,
                    Date checkinDate, Date checkoutDate, Long numberOfRooms) {
-        this.bookingId = bookingId;
         this.primaryGuest = primaryGuest;
         this.employeeId = employeeId;
         this.bookingDate = bookingDate;

@@ -21,6 +21,8 @@ public class EmployeeController {
 
      @GetMapping(path = "/login/{username}")
      public Employee employeeLogin(@PathVariable String username) {
+         System.out.println(username);
+         System.out.println(employeeService.employeeLogin(username).getPassword());
          return employeeService.employeeLogin(username);
      }
 

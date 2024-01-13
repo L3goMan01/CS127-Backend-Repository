@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.*;
 
 @RequiredArgsConstructor
 @RestController
-@RequestMapping(path="/brn")
+@RequestMapping(path="/brn/service")
 public class BRNServiceController {
     private final BRNServiceServices brnServiceServices;
 
